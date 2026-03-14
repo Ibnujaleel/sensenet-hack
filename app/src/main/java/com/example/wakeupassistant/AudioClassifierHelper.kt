@@ -30,16 +30,6 @@ import org.tensorflow.lite.task.core.BaseOptions
  */
 class AudioClassifierHelper(private val context: Context) {
 
-    companion object {
-        private const val TAG = "AudioClassifier"
-        private const val MODEL_FILE = "yamnet.tflite"
-
-        const val VOLUME_THRESHOLD = 0.001f  // Very low for testing – catches any sound
-        private const val MIN_CONFIDENCE = 0.2f  // Lowered for testing
-        private const val POLL_INTERVAL_MS = 500L
-        private const val COOLDOWN_MS = 2_000L
-    }
-
     // ── State ────────────────────────────────────────────────────────
 
     private var audioClassifier: AudioClassifier? = null
@@ -49,8 +39,9 @@ class AudioClassifierHelper(private val context: Context) {
     var isListening = false
         private set
 
-    /** Fired on a background thread when an important sound is classified. */
-    var onImportantSoundDetected: ((label: String) -> Unit)? = null
+    /** Fired on a background thread when an important sound is classified.
+     *  Parameters: label, priority ("high" or "low") */
+    var onImportantSoundDetected: ((label: String, priority: String) -> Unit)? = null
 
     /** Fired every classification cycle with live audio data for the debug UI. */
     var onAudioData: ((rms: Float, categories: List<Pair<String, Float>>) -> Unit)? = null
@@ -133,7 +124,8 @@ class AudioClassifierHelper(private val context: Context) {
                                     "⚡ Important sound: \"${category.label}\" " +
                                     "(conf=${category.score}, rms=$rms)"
                                 )
-                                onImportantSoundDetected?.invoke(category.label)
+                                val priority = getSoundPriority(category.label)
+                                onImportantSoundDetected?.invoke(category.label, priority)
                                 Thread.sleep(COOLDOWN_MS)
                                 break
                             }
@@ -167,13 +159,33 @@ class AudioClassifierHelper(private val context: Context) {
     }
 
     fun isSoundImportant(category: String): Boolean {
-        val importantKeywords = listOf(
-            "speech", "talking", "conversation",   // Added for testing
-            "knock", "door", "siren", "fire alarm", "smoke detector",
-            "alarm", "emergency vehicle", "screaming", "glass breaking",
-            "gunshot", "explosion", "bell", "buzzer", "doorbell"
-        )
         val lower = category.lowercase()
-        return importantKeywords.any { lower.contains(it) }
+        return HIGH_PRIORITY_KEYWORDS.any { lower.contains(it) } ||
+               LOW_PRIORITY_KEYWORDS.any { lower.contains(it) }
+    }
+
+    fun getSoundPriority(category: String): String {
+        val lower = category.lowercase()
+        return if (HIGH_PRIORITY_KEYWORDS.any { lower.contains(it) }) "high" else "low"
+    }
+
+    companion object {
+        private const val TAG = "AudioClassifier"
+        private const val MODEL_FILE = "yamnet.tflite"
+
+        const val VOLUME_THRESHOLD = 0.001f
+        private const val MIN_CONFIDENCE = 0.2f
+        private const val POLL_INTERVAL_MS = 500L
+        private const val COOLDOWN_MS = 2_000L
+
+        val HIGH_PRIORITY_KEYWORDS = listOf(
+            "fire alarm", "smoke detector", "siren", "explosion",
+            "gunshot", "screaming", "glass breaking", "emergency vehicle"
+        )
+
+        val LOW_PRIORITY_KEYWORDS = listOf(
+            "speech", "talking", "conversation",
+            "knock", "door", "alarm", "bell", "buzzer", "doorbell"
+        )
     }
 }

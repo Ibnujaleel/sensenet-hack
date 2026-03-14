@@ -1,178 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SenseNet – Debug</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            display: flex; flex-direction: column;
-            height: 100vh;
-            background: #111; color: #eee;
-            font-family: 'Segoe UI', sans-serif;
-            padding: 12px;
-            gap: 10px;
-        }
-
-        /* ── Status banner ──────────────────────────────────────── */
-        #status {
-            font-size: 0.85rem; opacity: 0.7;
-            text-align: center;
-        }
-
-        /* ── Audio debug panel ──────────────────────────────────── */
-        .panel {
-            background: #1a1a1a; border-radius: 10px;
-            padding: 12px; flex-shrink: 0;
-        }
-        .panel h2 {
-            font-size: 0.75rem; text-transform: uppercase;
-            letter-spacing: 1px; opacity: 0.5; margin-bottom: 8px;
-        }
-
-        /* Volume bar */
-        .vol-bar-bg {
-            height: 10px; background: #333; border-radius: 5px;
-            overflow: hidden; margin-bottom: 8px;
-            position: relative;
-        }
-        .vol-threshold {
-            position: absolute; top: 0; bottom: 0;
-            width: 2px; background: #f44336;
-            z-index: 2;
-        }
-        .vol-bar-fg {
-            height: 100%; width: 0%;
-            background: linear-gradient(90deg, #4caf50, #ff9800, #f44336);
-            border-radius: 5px; transition: width 0.15s;
-        }
-        #rmsValue {
-            font-size: 0.7rem; opacity: 0.5; margin-bottom: 6px;
-        }
-
-        /* Classification list */
-        .class-list {
-            list-style: none; font-size: 0.8rem;
-        }
-        .class-list li {
-            display: flex; justify-content: space-between;
-            padding: 2px 0; border-bottom: 1px solid #222;
-        }
-        .class-list .score { opacity: 0.5; }
-
-        /* ── Last trigger ───────────────────────────────────────── */
-        #lastTrigger {
-            color: #ff9800; font-size: 0.85rem;
-            text-align: center; min-height: 1.2em;
-        }
-
-        /* ── Dismiss button ─────────────────────────────────────── */
-        button {
-            padding: 14px; width: 100%;
-            font-size: 1rem; font-weight: 600;
-            background: #e53935; color: #fff;
-            border: none; border-radius: 10px;
-            cursor: pointer; margin-top: auto;
-            transition: background 0.2s, transform 0.1s;
-        }
-        button:active { background: #b71c1c; transform: scale(0.97); }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SenseNet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p id="status">Listening…</p>
+    <div id="app-container">
+        <!-- HEADER -->
+        <header id="app-header" class="state-monitoring">
+            <h1 class="logo">SenseNet</h1>
+            <div class="status-indicator">
+                <span id="status-dot" class="dot monitoring"></span>
+                <span id="status-text">Connecting…</span>
+            </div>
+        </header>
 
-    <!-- Audio debug panel -->
-    <div class="panel">
-        <h2>🎤 Audio Feed</h2>
-        <div class="vol-bar-bg">
-            <div class="vol-bar-fg" id="volBar"></div>
-            <div class="vol-threshold" id="threshLine"></div>
+        <!-- MAIN LAYOUT -->
+        <main id="main-content">
+            <!-- SCREEN 1: MONITORING -->
+            <section id="screen-monitoring" class="screen active">
+                <div class="card sound-meter-card">
+                    <h2>Sound Level</h2>
+                    <div class="meter-container">
+                        <div id="sound-meter-bar" class="meter-bar"></div>
+                    </div>
+                </div>
+
+                <div class="card detection-card">
+                    <div class="detection-info">
+                        <div class="label-group">
+                            <span class="label">Detected Sound</span>
+                            <h2 id="detected-sound">None</h2>
+                        </div>
+                        <div class="confidence-group">
+                            <span class="label">Confidence</span>
+                            <h2 id="confidence-score">0.00</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alert status + Dismiss -->
+                <div class="card alert-card">
+                    <span class="label">Alert Status</span>
+                    <div id="alert-status-text" class="alert-status-text safe">Safe</div>
+                    <button id="btn-dismiss" class="btn btn-danger" style="margin-top:12px; display:none;"
+                        onclick="dismissAlarm()">Dismiss Alarm</button>
+                </div>
+
+                <!-- BLE connection status -->
+                <div class="card">
+                    <div class="detection-info">
+                        <div class="label-group">
+                            <span class="label">ESP32 Watch</span>
+                            <h2 id="ble-status" style="font-size:1rem;">Disconnected</h2>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" style="padding:10px 16px; width:auto;"
+                                onclick="connectWatch()">Connect</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card log-card">
+                    <span class="label">Detection Log</span>
+                    <ul id="detection-log" class="log-list"></ul>
+                </div>
+            </section>
+
+            <!-- SCREEN 2: SETTINGS -->
+            <section id="screen-settings" class="screen">
+                <div class="card">
+                    <h2>Alert Duration</h2>
+                    <div class="form-group">
+                        <label for="high-duration">🔴 High Priority (seconds): <span id="high-dur-val">60</span></label>
+                        <input type="range" id="high-duration" min="10" max="120" step="5" value="60">
+                    </div>
+                    <div class="form-group">
+                        <label for="low-duration">🟡 Low Priority (seconds): <span id="low-dur-val">20</span></label>
+                        <input type="range" id="low-duration" min="5" max="60" step="5" value="20">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Hardware Test</h2>
+                    <p class="summary-text">Send a test alert to the ESP32 wristband to verify BLE communication.</p>
+                    <button id="btn-test-alert" class="btn btn-primary" onclick="testAlert()">Test Wristband Vibration</button>
+                    <div id="test-result-msg" class="msg-box hidden"></div>
+                </div>
+
+                <div class="card">
+                    <h2>Find My Watch</h2>
+                    <p class="summary-text">Flash the LED on the ESP32 to locate it.</p>
+                    <button id="btn-find-watch" class="btn btn-primary" onclick="toggleFindWatch()">🔍 Start Finding</button>
+                </div>
+
+                <div class="card demo-card">
+                    <h2>Demo Tools</h2>
+                    <p class="summary-text">Simulate a dangerous sound for demonstration.</p>
+                    <button id="btn-simulate" class="btn btn-danger" onclick="simulateAlert()">Simulate "Fire Alarm"</button>
+                </div>
+            </section>
+
+            <!-- SCREEN 3: ABOUT -->
+            <section id="screen-about" class="screen">
+                <div class="card about-card">
+                    <div class="app-icon-large"></div>
+                    <h2>SenseNet</h2>
+                    <p class="version">Version 1.0.0 (Hackathon Build)</p>
+                    <p class="description">SenseNet is a real-time assistive alert system designed for
+                        individuals with hearing impairment. It listens for dangerous sounds using the
+                        phone's microphone, verifies danger with visual AI, and sends a haptic alert to
+                        a wearable ESP32 wristband via BLE.</p>
+
+                    <h3>Features</h3>
+                    <ul class="feature-list">
+                        <li>Local AI Sound Classification (YAMNet)</li>
+                        <li>YOLOv8 Person Detection</li>
+                        <li>ESP32 BLE Hardware Integration</li>
+                        <li>Priority-Based Alerts (High / Low)</li>
+                        <li>100% On-Device Processing</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- ERROR OVERLAY -->
+        <div id="error-overlay" class="overlay hidden">
+            <div class="overlay-content">
+                <div class="icon-warning">⚠️</div>
+                <h2 id="error-title">Error</h2>
+                <p id="error-message">Message</p>
+                <button id="btn-dismiss-error" class="btn" onclick="dismissError()">Dismiss</button>
+            </div>
         </div>
-        <p id="rmsValue">RMS: — | Threshold: —</p>
-        <ul class="class-list" id="classList">
-            <li><span>Waiting…</span><span class="score">—</span></li>
-        </ul>
+
+        <!-- BOTTOM NAVIGATION -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-target="screen-monitoring">
+                <span class="icon">🎙️</span>
+                <span class="nav-text">Monitor</span>
+            </button>
+            <button class="nav-btn" data-target="screen-settings">
+                <span class="icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </button>
+            <button class="nav-btn" data-target="screen-about">
+                <span class="icon">ℹ️</span>
+                <span class="nav-text">About</span>
+            </button>
+        </nav>
     </div>
 
-    <p id="lastTrigger"></p>
-
-    <!-- YOLO detection result -->
-    <div class="panel" style="padding:8px 12px;">
-        <h2>📷 YOLO Detection</h2>
-        <p id="yoloResult" style="font-size:0.85rem;">No detection run yet</p>
-    </div>
-
-    <button id="testYoloBtn" onclick="testYolo()" style="background:#2196f3; margin-bottom:8px;">📷 Test YOLO (Capture + Detect)</button>
-    <button id="testVibrateBtn" onclick="testVibrate()" style="background:#4caf50; margin-bottom:8px;">🔔 Test Vibrate</button>
-    <button id="dismissBtn" onclick="dismissAlarm()">Dismiss Alarm</button>
-
-    <script>
-        /* ── Called FROM native: push live audio data ───────────── */
-        function updateAudioData(rms, categoriesJson) {
-            var maxRms = 0.005;
-            var threshold = 0.001; // must match VOLUME_THRESHOLD in AudioClassifierHelper
-            var pct = Math.min(rms / maxRms, 1.0) * 100;
-            var threshPct = Math.min(threshold / maxRms, 1.0) * 100;
-            document.getElementById('volBar').style.width = pct + '%';
-            document.getElementById('threshLine').style.left = threshPct + '%';
-            document.getElementById('rmsValue').textContent =
-                'RMS: ' + rms.toFixed(5) + ' | Threshold: ' + threshold;
-
-            // Classification list
-            try {
-                var cats = JSON.parse(categoriesJson);
-                var ul = document.getElementById('classList');
-                ul.innerHTML = '';
-                cats.forEach(function(c) {
-                    var li = document.createElement('li');
-                    li.innerHTML = '<span>' + c.label + '</span><span class="score">' +
-                                   (c.score * 100).toFixed(1) + '%</span>';
-                    ul.appendChild(li);
-                });
-            } catch(e) {}
-        }
-
-        /* ── Called FROM native: status line ────────────────────── */
-        function updateStatus(msg) {
-            document.getElementById('status').textContent = msg;
-        }
-
-        /* ── Called FROM native: show last important trigger ───── */
-        function showTrigger(label) {
-            document.getElementById('lastTrigger').textContent = '⚡ Triggered: ' + label;
-        }
-
-        /* ── Test YOLO: capture a frame and run detection ────── */
-        function testYolo() {
-            if (window.Android) {
-                window.Android.testYolo();
-                document.getElementById('yoloResult').textContent = 'Capturing frame…';
-                document.getElementById('status').textContent = '📷 Running YOLO detection…';
-            }
-        }
-
-        /* ── Called FROM native: show YOLO detection result ───── */
-        function updateYoloResult(result) {
-            document.getElementById('yoloResult').textContent = result;
-        }
-
-        /* ── Test vibration directly ────────────────────────────── */
-        function testVibrate() {
-            if (window.Android) {
-                window.Android.testVibrate();
-                document.getElementById('status').textContent = '📳 Vibrating…';
-            }
-        }
-
-        /* ── Called by user tap → native dismiss ───────────────── */
-        function dismissAlarm() {
-            if (window.Android) {
-                window.Android.dismissAlarm();
-                document.getElementById('status').textContent = 'Alarm Dismissed';
-                document.getElementById('lastTrigger').textContent = '';
-            }
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

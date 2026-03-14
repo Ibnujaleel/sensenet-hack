@@ -93,24 +93,14 @@ class ImageDetectionHelper(private val context: Context) {
         }
     }
 
-    // ── CameraX setup ────────────────────────────────────────────────
-
     /**
-     * Bind the CameraX Preview + ImageCapture use-cases.
-     * Call this once after permissions are granted.
-     *
-     * @param lifecycleOwner  the Activity (for automatic lifecycle binding)
-     * @param previewView     the PreviewView in the XML layout
+     * Bind CameraX use-cases.
+     * @param previewView if non-null, shows a live preview; if null, runs headless (capture only)
      */
-    fun startCamera(lifecycleOwner: LifecycleOwner, previewView: PreviewView) {
+    fun startCamera(lifecycleOwner: LifecycleOwner, previewView: PreviewView?) {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
         cameraProviderFuture.addListener({
             val provider = cameraProviderFuture.get()
-
-            // Preview use-case → shows live feed in the PreviewView
-            val preview = Preview.Builder().build().also {
-                it.setSurfaceProvider(previewView.surfaceProvider)
-            }
 
             // ImageCapture use-case → for on-demand still frames
             imageCapture = ImageCapture.Builder()
@@ -121,10 +111,22 @@ class ImageDetectionHelper(private val context: Context) {
 
             try {
                 provider.unbindAll()
-                provider.bindToLifecycle(
-                    lifecycleOwner, cameraSelector, preview, imageCapture
-                )
-                Log.d(TAG, "CameraX bound – live preview active")
+                if (previewView != null) {
+                    // Preview + capture
+                    val preview = Preview.Builder().build().also {
+                        it.setSurfaceProvider(previewView.surfaceProvider)
+                    }
+                    provider.bindToLifecycle(
+                        lifecycleOwner, cameraSelector, preview, imageCapture
+                    )
+                    Log.d(TAG, "CameraX bound – preview + capture")
+                } else {
+                    // Headless: capture only
+                    provider.bindToLifecycle(
+                        lifecycleOwner, cameraSelector, imageCapture!!
+                    )
+                    Log.d(TAG, "CameraX bound – headless capture only")
+                }
             } catch (e: Exception) {
                 Log.e(TAG, "CameraX bind failed", e)
             }
