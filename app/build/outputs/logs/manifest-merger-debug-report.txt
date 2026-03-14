@@ -1,0 +1,311 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12
+MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\7b1eafd5e47c78c7240d96f9bbf80522\transformed\camera-video-1.3.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-lifecycle:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\9babd7b4f095f552b447619a8ae230d5\transformed\camera-lifecycle-1.3.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-view:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\463968c73dc3defed36daa38be2828f3\transformed\camera-view-1.3.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04716e92be46195b8a0fe1fa28def753\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ef383254d7ed336647320bff66369b36\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.webkit:webkit:1.9.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4800a79373234aeadc8c97fc0473f39f\transformed\webkit-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\cd9db61ab88bfe0d888c1d3eff038aa7\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\697f83e32d481a9b2303859f9e82ff11\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\a4d3d1e4401d8ca225f6106e2ed34766\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\7fb27ef0343009e7127b36e86ed11731\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\1fce54d94d453d928bece014616d5e2a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4c05b579087e0a0184b1465c85c81c42\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b792d4a1c021c99b6a00dd0980bf1601\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8556351e7fba8a8ee237b775be3adabb\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\f0df1382350152a34ffd2ef73230d46e\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8eeb2c98a5b77a590ef7158072fa7220\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e569a79f244d80db5f09570c01750055\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\3a4022edf8ea46f2f99b6b2f4d64d81c\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\dbb99af511ecfbc4316e3ba61614363c\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0ea9d196a68eeeb61a9097b2e14340ef\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8579d6eae5a9b61905a9b1b15ef5ac47\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\437046cb4f3002bb96914835a9923a90\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ece888911f6095dda5be373e816e62ab\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8cbc886fa63ee60c32aa878f1d5fe62d\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\765ba1358efd7e4e7561a566f6d23c4c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\770a0d98f44c5cf35d72c6361b88b877\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e0ac25945418e8e0b0ce05cdb2cd2273\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8b226b84272761060f547153888de9cd\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\a6c8ccfbd508ddf759423a926461a033\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [org.tensorflow:tensorflow-lite-task-audio:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\284d9b9bc60a871163b22299b32cc1e7\transformed\tensorflow-lite-task-audio-0.4.4\AndroidManifest.xml:2:1-9:12
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e9f2cd9c2b04a7e82b9293cd8cd6eed2\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:2:1-11:12
+MERGED from [org.tensorflow:tensorflow-lite-task-base:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\bc48eec17c5628900ab70f485b4aeed7\transformed\tensorflow-lite-task-base-0.4.4\AndroidManifest.xml:2:1-6:12
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\c2157bb4f8d544b05431026d48061dcb\transformed\tensorflow-lite-support-api-0.4.4\AndroidManifest.xml:2:1-5:12
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b0070533f3384bc4e5f42ce46be42e51\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ab490bb011f148d5559753f1276f039d\transformed\image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
+	package
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:3:5-42
+		INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:6:22-68
+uses-permission#android.permission.CAMERA
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:7:22-62
+uses-permission#android.permission.INTERNET
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:10:22-73
+uses-permission#android.permission.VIBRATE
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:11:22-63
+uses-feature#android.hardware.camera.any
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:14:5-88
+	android:required
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:14:62-85
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:14:19-61
+uses-feature#android.hardware.microphone
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:15:5-88
+	android:required
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:15:62-85
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:15:19-61
+application
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:17:5-38:19
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml:17:5-38:19
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\765ba1358efd7e4e7561a566f6d23c4c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\765ba1358efd7e4e7561a566f6d23c4c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e9f2cd9c2b04a7e82b9293cd8cd6eed2\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e9f2cd9c2b04a7e82b9293cd8cd6eed2\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite-task-base:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\bc48eec17c5628900ab70f485b4aeed7\transformed\tensorflow-lite-task-base-0.4.4\AndroidManifest.xml:4:4-5:18
+MERGED from [org.tensorflow:tensorflow-lite-task-base:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\bc48eec17c5628900ab70f485b4aeed7\transformed\tensorflow-lite-task-base-0.4.4\AndroidManifest.xml:4:4-5:18
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b0070533f3384bc4e5f42ce46be42e51\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b0070533f3384bc4e5f42ce46be42e51\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ab490bb011f148d5559753f1276f039d\transformed\image-1.0.0-beta1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ab490bb011f148d5559753f1276f039d\transformed\image-1.0.0-beta1\AndroidManifest.xml:7:5-20
+	android:extractNativeLibs
+		INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:22:9-35
+	android:label
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:20:9-33
+	android:roundIcon
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:21:9-54
+	android:icon
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:19:9-43
+	android:allowBackup
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:18:9-35
+	android:theme
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:23:9-65
+	android:usesCleartextTraffic
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:24:9-44
+activity#com.example.wakeupassistant.MainActivity
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:30:9-37:20
+	android:exported
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:32:13-36
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:31:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:33:13-36:29
+action#android.intent.action.MAIN
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from C:\SenseNet\app\src\main\AndroidManifest.xml:35:27-74
+uses-sdk
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\7b1eafd5e47c78c7240d96f9bbf80522\transformed\camera-video-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\7b1eafd5e47c78c7240d96f9bbf80522\transformed\camera-video-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\9babd7b4f095f552b447619a8ae230d5\transformed\camera-lifecycle-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\9babd7b4f095f552b447619a8ae230d5\transformed\camera-lifecycle-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-view:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\463968c73dc3defed36daa38be2828f3\transformed\camera-view-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-view:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\463968c73dc3defed36daa38be2828f3\transformed\camera-view-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04716e92be46195b8a0fe1fa28def753\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04716e92be46195b8a0fe1fa28def753\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ef383254d7ed336647320bff66369b36\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ef383254d7ed336647320bff66369b36\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.9.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4800a79373234aeadc8c97fc0473f39f\transformed\webkit-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.webkit:webkit:1.9.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4800a79373234aeadc8c97fc0473f39f\transformed\webkit-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\cd9db61ab88bfe0d888c1d3eff038aa7\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\cd9db61ab88bfe0d888c1d3eff038aa7\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\697f83e32d481a9b2303859f9e82ff11\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\697f83e32d481a9b2303859f9e82ff11\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\a4d3d1e4401d8ca225f6106e2ed34766\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\a4d3d1e4401d8ca225f6106e2ed34766\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\7fb27ef0343009e7127b36e86ed11731\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\7fb27ef0343009e7127b36e86ed11731\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\1fce54d94d453d928bece014616d5e2a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\1fce54d94d453d928bece014616d5e2a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4c05b579087e0a0184b1465c85c81c42\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4c05b579087e0a0184b1465c85c81c42\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b792d4a1c021c99b6a00dd0980bf1601\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b792d4a1c021c99b6a00dd0980bf1601\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8556351e7fba8a8ee237b775be3adabb\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8556351e7fba8a8ee237b775be3adabb\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\f0df1382350152a34ffd2ef73230d46e\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\f0df1382350152a34ffd2ef73230d46e\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8eeb2c98a5b77a590ef7158072fa7220\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8eeb2c98a5b77a590ef7158072fa7220\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e569a79f244d80db5f09570c01750055\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e569a79f244d80db5f09570c01750055\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\3a4022edf8ea46f2f99b6b2f4d64d81c\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\3a4022edf8ea46f2f99b6b2f4d64d81c\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\dbb99af511ecfbc4316e3ba61614363c\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\dbb99af511ecfbc4316e3ba61614363c\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0ea9d196a68eeeb61a9097b2e14340ef\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0ea9d196a68eeeb61a9097b2e14340ef\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8579d6eae5a9b61905a9b1b15ef5ac47\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8579d6eae5a9b61905a9b1b15ef5ac47\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\437046cb4f3002bb96914835a9923a90\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\437046cb4f3002bb96914835a9923a90\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ece888911f6095dda5be373e816e62ab\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ece888911f6095dda5be373e816e62ab\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8cbc886fa63ee60c32aa878f1d5fe62d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8cbc886fa63ee60c32aa878f1d5fe62d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\765ba1358efd7e4e7561a566f6d23c4c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\765ba1358efd7e4e7561a566f6d23c4c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\770a0d98f44c5cf35d72c6361b88b877\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\770a0d98f44c5cf35d72c6361b88b877\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e0ac25945418e8e0b0ce05cdb2cd2273\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e0ac25945418e8e0b0ce05cdb2cd2273\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8b226b84272761060f547153888de9cd\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\8b226b84272761060f547153888de9cd\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\a6c8ccfbd508ddf759423a926461a033\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\a6c8ccfbd508ddf759423a926461a033\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [org.tensorflow:tensorflow-lite-task-audio:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\284d9b9bc60a871163b22299b32cc1e7\transformed\tensorflow-lite-task-audio-0.4.4\AndroidManifest.xml:5:5-7:41
+MERGED from [org.tensorflow:tensorflow-lite-task-audio:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\284d9b9bc60a871163b22299b32cc1e7\transformed\tensorflow-lite-task-audio-0.4.4\AndroidManifest.xml:5:5-7:41
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e9f2cd9c2b04a7e82b9293cd8cd6eed2\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\e9f2cd9c2b04a7e82b9293cd8cd6eed2\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\c2157bb4f8d544b05431026d48061dcb\transformed\tensorflow-lite-support-api-0.4.4\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\c2157bb4f8d544b05431026d48061dcb\transformed\tensorflow-lite-support-api-0.4.4\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b0070533f3384bc4e5f42ce46be42e51\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b0070533f3384bc4e5f42ce46be42e51\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ab490bb011f148d5559753f1276f039d\transformed\image-1.0.0-beta1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\ab490bb011f148d5559753f1276f039d\transformed\image-1.0.0-beta1\AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\SenseNet\app\src\main\AndroidManifest.xml
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\0e837e5019e4dfe050589890ff060b04\transformed\camera-core-1.3.1\AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\04ae9c00604b984e7ba4876f456b2096\transformed\camera-camera2-1.3.1\AndroidManifest.xml:31:17-103
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\58c9334d1d628b39365996652eb5fd65\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\b20e61578bc8a9f2a7607d47138c9494\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+permission#com.example.wakeupassistant.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.wakeupassistant.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\6d3b3cb1ee12db3b50f8898ca61e50cf\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mysel\.gradle\caches\9.0-milestone-1\transforms\4109f6723c5c7b46634ba83f757ac118\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from C:\SenseNet\app\src\main\AndroidManifest.xml:2:1-40:12 reason: src.java.org.tensorflow.lite.task.core requested WRITE_EXTERNAL_STORAGE

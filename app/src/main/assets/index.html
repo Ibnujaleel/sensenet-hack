@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SenseNet – Debug</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex; flex-direction: column;
+            height: 100vh;
+            background: #111; color: #eee;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 12px;
+            gap: 10px;
+        }
+
+        /* ── Status banner ──────────────────────────────────────── */
+        #status {
+            font-size: 0.85rem; opacity: 0.7;
+            text-align: center;
+        }
+
+        /* ── Audio debug panel ──────────────────────────────────── */
+        .panel {
+            background: #1a1a1a; border-radius: 10px;
+            padding: 12px; flex-shrink: 0;
+        }
+        .panel h2 {
+            font-size: 0.75rem; text-transform: uppercase;
+            letter-spacing: 1px; opacity: 0.5; margin-bottom: 8px;
+        }
+
+        /* Volume bar */
+        .vol-bar-bg {
+            height: 10px; background: #333; border-radius: 5px;
+            overflow: hidden; margin-bottom: 8px;
+            position: relative;
+        }
+        .vol-threshold {
+            position: absolute; top: 0; bottom: 0;
+            width: 2px; background: #f44336;
+            z-index: 2;
+        }
+        .vol-bar-fg {
+            height: 100%; width: 0%;
+            background: linear-gradient(90deg, #4caf50, #ff9800, #f44336);
+            border-radius: 5px; transition: width 0.15s;
+        }
+        #rmsValue {
+            font-size: 0.7rem; opacity: 0.5; margin-bottom: 6px;
+        }
+
+        /* Classification list */
+        .class-list {
+            list-style: none; font-size: 0.8rem;
+        }
+        .class-list li {
+            display: flex; justify-content: space-between;
+            padding: 2px 0; border-bottom: 1px solid #222;
+        }
+        .class-list .score { opacity: 0.5; }
+
+        /* ── Last trigger ───────────────────────────────────────── */
+        #lastTrigger {
+            color: #ff9800; font-size: 0.85rem;
+            text-align: center; min-height: 1.2em;
+        }
+
+        /* ── Dismiss button ─────────────────────────────────────── */
+        button {
+            padding: 14px; width: 100%;
+            font-size: 1rem; font-weight: 600;
+            background: #e53935; color: #fff;
+            border: none; border-radius: 10px;
+            cursor: pointer; margin-top: auto;
+            transition: background 0.2s, transform 0.1s;
+        }
+        button:active { background: #b71c1c; transform: scale(0.97); }
+    </style>
+</head>
+<body>
+    <p id="status">Listening…</p>
+
+    <!-- Audio debug panel -->
+    <div class="panel">
+        <h2>🎤 Audio Feed</h2>
+        <div class="vol-bar-bg">
+            <div class="vol-bar-fg" id="volBar"></div>
+            <div class="vol-threshold" id="threshLine"></div>
+        </div>
+        <p id="rmsValue">RMS: — | Threshold: —</p>
+        <ul class="class-list" id="classList">
+            <li><span>Waiting…</span><span class="score">—</span></li>
+        </ul>
+    </div>
+
+    <p id="lastTrigger"></p>
+
+    <!-- YOLO detection result -->
+    <div class="panel" style="padding:8px 12px;">
+        <h2>📷 YOLO Detection</h2>
+        <p id="yoloResult" style="font-size:0.85rem;">No detection run yet</p>
+    </div>
+
+    <button id="testYoloBtn" onclick="testYolo()" style="background:#2196f3; margin-bottom:8px;">📷 Test YOLO (Capture + Detect)</button>
+    <button id="testVibrateBtn" onclick="testVibrate()" style="background:#4caf50; margin-bottom:8px;">🔔 Test Vibrate</button>
+    <button id="dismissBtn" onclick="dismissAlarm()">Dismiss Alarm</button>
+
+    <script>
+        /* ── Called FROM native: push live audio data ───────────── */
+        function updateAudioData(rms, categoriesJson) {
+            var maxRms = 0.005;
+            var threshold = 0.001; // must match VOLUME_THRESHOLD in AudioClassifierHelper
+            var pct = Math.min(rms / maxRms, 1.0) * 100;
+            var threshPct = Math.min(threshold / maxRms, 1.0) * 100;
+            document.getElementById('volBar').style.width = pct + '%';
+            document.getElementById('threshLine').style.left = threshPct + '%';
+            document.getElementById('rmsValue').textContent =
+                'RMS: ' + rms.toFixed(5) + ' | Threshold: ' + threshold;
+
+            // Classification list
+            try {
+                var cats = JSON.parse(categoriesJson);
+                var ul = document.getElementById('classList');
+                ul.innerHTML = '';
+                cats.forEach(function(c) {
+                    var li = document.createElement('li');
+                    li.innerHTML = '<span>' + c.label + '</span><span class="score">' +
+                                   (c.score * 100).toFixed(1) + '%</span>';
+                    ul.appendChild(li);
+                });
+            } catch(e) {}
+        }
+
+        /* ── Called FROM native: status line ────────────────────── */
+        function updateStatus(msg) {
+            document.getElementById('status').textContent = msg;
+        }
+
+        /* ── Called FROM native: show last important trigger ───── */
+        function showTrigger(label) {
+            document.getElementById('lastTrigger').textContent = '⚡ Triggered: ' + label;
+        }
+
+        /* ── Test YOLO: capture a frame and run detection ────── */
+        function testYolo() {
+            if (window.Android) {
+                window.Android.testYolo();
+                document.getElementById('yoloResult').textContent = 'Capturing frame…';
+                document.getElementById('status').textContent = '📷 Running YOLO detection…';
+            }
+        }
+
+        /* ── Called FROM native: show YOLO detection result ───── */
+        function updateYoloResult(result) {
+            document.getElementById('yoloResult').textContent = result;
+        }
+
+        /* ── Test vibration directly ────────────────────────────── */
+        function testVibrate() {
+            if (window.Android) {
+                window.Android.testVibrate();
+                document.getElementById('status').textContent = '📳 Vibrating…';
+            }
+        }
+
+        /* ── Called by user tap → native dismiss ───────────────── */
+        function dismissAlarm() {
+            if (window.Android) {
+                window.Android.dismissAlarm();
+                document.getElementById('status').textContent = 'Alarm Dismissed';
+                document.getElementById('lastTrigger').textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>
