@@ -1,65 +1,113 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: oklch(0.65 0.15 250);
-  --color-brand-light: oklch(0.85 0.15 250);
-  --color-brand-dark: oklch(0.20 0.10 250);
+  /* Brand / Monitoring */
+  --color-brand: oklch(0.60 0.18 250);
+  --color-brand-light: oklch(0.82 0.12 250);
+  --color-brand-dark: oklch(0.18 0.10 250);
   
-  /* Danger Colors */
-  --color-danger: oklch(0.60 0.25 29);
-  --color-danger-light: oklch(0.80 0.15 29);
-  --color-danger-dark: oklch(0.30 0.20 29);
+  /* Danger / Alert */
+  --color-danger: oklch(0.55 0.25 29);
+  --color-danger-light: oklch(0.78 0.15 29);
+  --color-danger-dark: oklch(0.28 0.18 29);
   
-  /* Safe Colors */
-  --color-safe: oklch(0.70 0.20 150);
+  /* Detection / Warning */
+  --color-warn: oklch(0.72 0.18 85);
+  --color-warn-dark: oklch(0.30 0.10 85);
   
-  /* Backgrounds */
-  --color-surface: oklch(0.12 0.05 250);
-  --color-surface-hover: oklch(0.16 0.05 250);
-  --color-bg: oklch(0.08 0.02 250);
+  /* Safe / Success */
+  --color-safe: oklch(0.68 0.18 150);
+  --color-safe-dark: oklch(0.28 0.12 150);
   
-  --font-sans: 'Outfit', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  /* Surfaces */
+  --color-surface: oklch(0.13 0.03 250);
+  --color-surface-hover: oklch(0.17 0.03 250);
+  --color-bg: oklch(0.07 0.02 260);
+  
+  /* Typography */
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
   --radius-xl: 16px;
   --radius-2xl: 24px;
 }
 
-body {
-  background: var(--color-bg);
-  color: #fff;
-  overflow-x: hidden;
-  overscroll-behavior: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+body {
+  background: var(--color-bg);
+  color: #e8ecf0;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Glass surfaces ---------- */
 .frosted {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .frosted-danger {
-  background: var(--color-danger-dark);
+  background: rgba(220, 38, 38, 0.12);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(244, 63, 94, 0.3);
-  box-shadow: 0 0 40px rgba(244, 63, 94, 0.2), inset 0 0 100px rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  box-shadow: 0 0 40px rgba(244, 63, 94, 0.15), inset 0 0 80px rgba(244, 63, 94, 0.06);
+}
+
+.frosted-brand {
+  background: rgba(59, 130, 246, 0.08);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(59, 130, 246, 0.15);
 }
 
 .glass-pill {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
+}
+
+/* ---------- Sound meter animation ---------- */
+@keyframes meter-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+.meter-live { animation: meter-pulse 1.5s ease-in-out infinite; }
+
+/* ---------- Range input ---------- */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-brand);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
