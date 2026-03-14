@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SenseNet - Assistive Safety</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- HEADER -->
+        <header id="app-header" class="state-monitoring">
+            <h1 class="logo">SenseNet</h1>
+            <div class="status-indicator">
+                <span id="status-dot" class="dot monitoring"></span>
+                <span id="status-text">Monitoring</span>
+            </div>
+        </header>
+
+        <!-- MAIN LAYOUT -->
+        <main id="main-content">
+            <!-- SCREEN 1: MONITORING -->
+            <section id="screen-monitoring" class="screen active">
+                <div class="card sound-meter-card">
+                    <h2>Sound Level</h2>
+                    <div class="meter-container">
+                        <div id="sound-meter-bar" class="meter-bar"></div>
+                    </div>
+                </div>
+
+                <div class="card detection-card">
+                    <div class="detection-info">
+                        <div class="label-group">
+                            <span class="label">Detected Sound</span>
+                            <h2 id="detected-sound">None</h2>
+                        </div>
+                        <div class="confidence-group">
+                            <span class="label">Confidence</span>
+                            <h2 id="confidence-score">0.00</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-row">
+                    <div class="card camera-card">
+                        <span class="label">Last Camera Frame</span>
+                        <div class="camera-preview">
+                            <canvas id="camera-canvas"></canvas>
+                            <div class="placeholder" id="camera-placeholder">Waiting for alert...</div>
+                        </div>
+                    </div>
+
+                    <div class="card alert-card">
+                        <span class="label">Alert Status</span>
+                        <div id="alert-status-text" class="alert-status-text safe">Safe</div>
+                    </div>
+                </div>
+
+                <div class="card log-card">
+                    <span class="label">Detection Log</span>
+                    <ul id="detection-log" class="log-list">
+                        <!-- Log entries will be added here -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SCREEN 2: SETTINGS -->
+            <section id="screen-settings" class="screen">
+                <div class="card">
+                    <h2>Configuration</h2>
+                    <div class="form-group">
+                        <label for="esp32-ip">ESP32 Device IP</label>
+                        <input type="text" id="esp32-ip" placeholder="e.g. 192.168.1.120">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sensitivity">Sensitivity Threshold: <span id="sensitivity-val">0.75</span></label>
+                        <input type="range" id="sensitivity" min="0.50" max="0.95" step="0.01" value="0.75">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Hardware Test</h2>
+                    <p class="summary-text">Send a test alert to the ESP32 wristband to verify communication and
+                        vibration hardware.</p>
+                    <button id="btn-test-alert" class="btn btn-primary">Test Wristband Vibration</button>
+                    <div id="test-result-msg" class="msg-box hidden"></div>
+                </div>
+
+                <!-- Simulation tools for Demo -->
+                <div class="card demo-card">
+                    <h2>Hackathon Demo Tools</h2>
+                    <p class="summary-text">Simulate a dangerous sound detection for demonstration purposes.</p>
+                    <button id="btn-simulate-alert" class="btn btn-danger">Simulate "Fire Alarm" (0.95)</button>
+                </div>
+            </section>
+
+            <!-- SCREEN 3: ABOUT -->
+            <section id="screen-about" class="screen">
+                <div class="card about-card">
+                    <div class="app-icon-large"></div>
+                    <h2>SenseNet</h2>
+                    <p class="version">Version 1.0.0 (Hackathon Build)</p>
+                    <p class="description">SenseNet is a real-time assistive alert system designed for individuals with
+                        hearing impairment. It listens for dangerous sounds using the phone's microphone, verifies
+                        danger, captures a visual frame, and sends a haptic alert to a wearable ESP32 wristband.</p>
+
+                    <h3>Features</h3>
+                    <ul class="feature-list">
+                        <li>Local AI Sound Classification (YAMNet)</li>
+                        <li>Automated Visual Context Capture</li>
+                        <li>ESP32 Hardware Integration</li>
+                        <li>100% On-Device Processing</li>
+                    </ul>
+
+                    <h3>Team Members</h3>
+                    <p>Developer</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- FULL SCREEN ERROR OVERLAY -->
+        <div id="error-overlay" class="overlay hidden">
+            <div class="overlay-content">
+                <div class="icon-warning">⚠️</div>
+                <h2 id="error-title">Error</h2>
+                <p id="error-message">Message</p>
+                <button id="btn-dismiss-error" class="btn">Dismiss</button>
+            </div>
+        </div>
+
+        <!-- BOTTOM NAVIGATION -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-target="screen-monitoring">
+                <span class="icon">🎙️</span>
+                <span class="nav-text">Monitor</span>
+            </button>
+            <button class="nav-btn" data-target="screen-settings">
+                <span class="icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </button>
+            <button class="nav-btn" data-target="screen-about">
+                <span class="icon">ℹ️</span>
+                <span class="nav-text">About</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>
